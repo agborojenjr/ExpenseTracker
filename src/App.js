@@ -8,7 +8,7 @@ import { Transactions } from './Components/Transactions';
 
 function App() {
   return (
-    <div>
+    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column' }}>
       <Header />
       <Balance />
       <Expenses />

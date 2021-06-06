@@ -20,6 +20,7 @@ export const Transactions = () => {
         <Typography>
             History
         </Typography>
+        <hr /> 
         <TextField id="outlined-basic" label="Cash" variant="outlined" />
         <TextField id="outlined-basic" label="Book" variant="outlined" />
         <TextField id="outlined-basic" label="Camera" variant="outlined" />
