@@ -1,3 +1,4 @@
+import { red } from '@material-ui/core/colors';
 import React from 'react';
 import { AddTransaction } from './Components/AddTransaction';
 import { Balance } from './Components/Balance';
@@ -8,7 +9,7 @@ import { Transactions } from './Components/Transactions';
 
 function App() {
   return (
-    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column' }}>
+    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column'}}>
       <Header />
       <Balance />
       <Expenses />
