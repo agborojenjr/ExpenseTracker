@@ -15,15 +15,6 @@ export const AddTransaction = () => {
         //   flexDirection: "column",
         // }}
       >
-        {/* <div>
-          <Typography
-            style={{
-              textAlign: 'left',
-            }}
-          >
-            Add New Transaction
-          </Typography>
-        </div> */}
         <div
           style={{
             display: 'flex',
