@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { Box } from '@material-ui/core';
+import { Box, Paper } from '@material-ui/core';
 
 const initialState = {
   transactions: [
@@ -9,7 +9,6 @@ const initialState = {
     {id: 2, text:'Salary', amount:300},
     {id: 3, text:'Book', amount:-10},
     {id: 4, text:'Camera', amount:150},
-    {id: 3, text:'Cash', amount:-100},
     {id: 4, text:'Ojen', amount:600},
   ]
 }
@@ -31,14 +30,15 @@ export const Transactions = () => {
 
     const payment = initialState.transactions.map((transaction, i) => {
       return (
-        <Box
+        <Paper
+          elevation={2}
           border={1}
           style={{ display: "flex", justifyContent: "space-between" }}
           key={i}
         >
           <div>{transaction.text}</div>
           <div>{transaction.amount}</div>
-        </Box>
+        </Paper>
       );
     });
 
