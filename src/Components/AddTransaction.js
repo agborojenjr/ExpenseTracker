@@ -28,10 +28,10 @@ export const AddTransaction = () => {
           <Typography>Text</Typography>
           <TextField
             id="outlined-full-width"
-            style={{ margin: 8 }}
+            style={{ marginBottom: 8 }}
             placeholder="Enter text..."
             fullWidth
-            margin="normal"
+            // margin="normal"
             InputLabelProps={{
               shrink: true,
             }}
@@ -39,13 +39,17 @@ export const AddTransaction = () => {
           />
         </div>
         <div>
-          <Typography>Amount</Typography>
+          <Typography>
+            Amount
+            <br />
+            (negative-expense, positive-income)
+          </Typography>
           <TextField
             id="outlined-full-width"
-            style={{ margin: 8 }}
+            style={{ marginBottom: 8 }}
             placeholder="Enter amount..."
             fullWidth
-            margin="normal"
+            // margin="normal"
             InputLabelProps={{
               shrink: true,
             }}

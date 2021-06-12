@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Box, Paper } from '@material-ui/core';
+// import ToggleButton from '@material-ui/lab/ToggleButton';
 
 const initialState = {
   transactions: [
@@ -9,7 +10,7 @@ const initialState = {
     {id: 2, text:'Salary', amount:300},
     {id: 3, text:'Book', amount:-10},
     {id: 4, text:'Camera', amount:150},
-    {id: 4, text:'Ojen', amount:600},
+    {id: 5, text:'Ojen', amount:600},
   ]
 }
 
@@ -33,19 +34,21 @@ export const Transactions = () => {
         <Paper
           elevation={2}
           border={1}
-          style={{ display: "flex", justifyContent: "space-between" }}
+          style={{ display: "flex", justifyContent: "space-between", width:260 }}
           key={i}
         >
-          <div>{transaction.text}</div>
-          <div>{transaction.amount}</div>
+          <div style={{ marginLeft: 5 }}>{transaction.text}</div>
+          <div style={{ marginRight: 5 }}>{transaction.amount}</div>
         </Paper>
       );
     });
 
     return (
       <form className={classes.root} noValidate autoComplete="off">
-        <Typography>History</Typography>
-        <hr />
+        {/* <ToggleButton value="bold" aria-label="bold"> */}
+          <Typography>History</Typography>
+        {/* </ToggleButton> */}
+        <hr style={{ width:260 }} />
         {payment}
       </form>
     );

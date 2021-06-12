@@ -9,7 +9,7 @@ import { Transactions } from './Components/Transactions';
 
 function App() {
   return (
-    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column'}}>
+    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#EDEEEE' }}>
       <Header />
       <Balance />
       <Expenses />

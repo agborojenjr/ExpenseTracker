@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography, Paper } from '@material-ui/core'
 import { green, red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     income: {
     //   fontSize: 60,
       color: green[300],
+      border: 180,
     },
     expense: {
         //   fontSize: 60,
@@ -28,23 +29,23 @@ const useStyles = makeStyles({
 export const Expenses = () => {
     const classes = useStyles();
     return (
-        <Typography component='div'>
-            <Box>
-                <Typography>
-                    INCOME
-                </Typography>
-                <Typography className={classes.income}>
-                    $500.00
-                </Typography>
+          <Paper style={{ display: 'flex', justifyContent:'space-around', width:260 }}>
+            <Box style={{margin: 10 }}>
+              <Typography>
+                  INCOME
+              </Typography>
+              <Typography className={classes.income}>
+                  $500.00
+              </Typography>
             </Box>
-            <Box>
-                <Typography>
-                    EXPENSE
-                </Typography>
-                <Typography className={classes.expense}>
-                    $240.00
-                </Typography>
+            <Box style={{margin: 10 }}>
+              <Typography>
+                  EXPENSE
+              </Typography>
+              <Typography className={classes.expense}>
+                  $240.00
+              </Typography>
             </Box>
-        </Typography>
+          </Paper>
     )
 }
