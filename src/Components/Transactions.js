@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Box, Paper } from '@material-ui/core';
+import { red } from '@material-ui/core/colors';
 
 const initialState = {
   transactions: [
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     payment: {
-      // border: 3px solid red,
+      // border: '3px solid red',
     },
   }));
 
@@ -33,7 +34,12 @@ export const Transactions = () => {
         <Paper
           elevation={2}
           border={1}
-          style={{ display: "flex", justifyContent: "space-between", width:260 }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: 260,
+            borderRight: "5px solid red",
+          }}
           key={i}
         >
           <div style={{ marginLeft: 5 }}>{transaction.text}</div>
@@ -44,8 +50,8 @@ export const Transactions = () => {
 
     return (
       <form className={classes.root} noValidate autoComplete="off">
-          <Typography style={{ fontWeight: 'bold' }}>History</Typography>
-        <hr style={{ width:260 }} />
+        <Typography style={{ fontWeight: "bold" }}>History</Typography>
+        <hr style={{ width: 260 }} />
         {payment}
       </form>
     );
