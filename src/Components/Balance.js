@@ -3,13 +3,9 @@ import Typography from '@material-ui/core/Typography';
 
 export const Balance = () => {
     return (
-        <Typography component='div' >
-            <Typography>
-                YOUR BALANCE
-            </Typography>
-            <Typography variant='h4'>
-                $260.00
-            </Typography>            
-        </Typography>
-    )
+      <div style={{ display:'flex', width:150, flexWrap:'wrap', marginLeft: -110 }}>
+          <Typography style={{ fontWeight: "bold" }}>YOUR BALANCE</Typography>
+          <Typography variant="h4">$260.00</Typography>
+      </div>
+    );
 }

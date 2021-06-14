@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Box, Paper } from '@material-ui/core';
-import ToggleButton from '@material-ui/lab/ToggleButton';
 
 const initialState = {
   transactions: [
@@ -45,9 +44,7 @@ export const Transactions = () => {
 
     return (
       <form className={classes.root} noValidate autoComplete="off">
-        <ToggleButton value="bold">
-          <Typography>History</Typography>
-        </ToggleButton>
+          <Typography style={{ fontWeight: 'bold' }}>History</Typography>
         <hr style={{ width:260 }} />
         {payment}
       </form>

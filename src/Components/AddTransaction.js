@@ -9,23 +9,25 @@ import Box from '@material-ui/core/Box';
 export const AddTransaction = () => {
     return (
       <form
-        // style={{
-        //   display: "flex",
-        //   alignItems: "center",
-        //   flexDirection: "column",
-        // }}
+        style={{
+          // display: "flex",
+          // alignItems: "center",
+          // flexDirection: "column",
+          width:260
+        }}
       >
         <div
           style={{
             display: 'flex',
             flexDirection: "column",
+            fontWeight: 'bold',
           }}
         >
           Add New Transaction
         </div>
         <hr />
         <div>
-          <Typography>Text</Typography>
+          <Typography style={{ fontSize: 15 }}>Text</Typography>
           <TextField
             id="outlined-full-width"
             style={{ marginBottom: 8 }}
@@ -39,7 +41,7 @@ export const AddTransaction = () => {
           />
         </div>
         <div>
-          <Typography>
+          <Typography style={{ fontSize: 15 }}>
             Amount
             <br />
             (negative-expense, positive-income)
