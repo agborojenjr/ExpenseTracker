@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 
 export const Balance = () => {
     return (
-        <Typography component='div'>
+        <Typography component='div' >
             <Typography>
                 YOUR BALANCE
             </Typography>

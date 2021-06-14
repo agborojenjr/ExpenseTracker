@@ -2,15 +2,14 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Paper } from '@material-ui/core'
 import { green, red } from '@material-ui/core/colors';
+import Divider from '@material-ui/core/Divider';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
       minWidth: 275,
     },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
+    divider: {
+      margin: theme.spacing(1.5, 0.5),
     },
     income: {
     //   fontSize: 60,
@@ -21,16 +20,13 @@ const useStyles = makeStyles({
         //   fontSize: 60,
           color: red[300],
         },
-    pos: {
-      marginBottom: 12,
-    },
-  });
+  }));
 
 export const Expenses = () => {
     const classes = useStyles();
     return (
           <Paper style={{ display: 'flex', justifyContent:'space-around', width:260 }}>
-            <Box style={{margin: 10 }}>
+            <Box style={{margin: 10, borderLeft:10 }}>
               <Typography>
                   INCOME
               </Typography>
@@ -38,6 +34,8 @@ export const Expenses = () => {
                   $500.00
               </Typography>
             </Box>
+            <Divider flexItem orientation="vertical" className={classes.divider} />
+            {/* <div style={{margin: 6, fontSize:35, color:'#DEDFDF' }}>|</div> */}
             <Box style={{margin: 10 }}>
               <Typography>
                   EXPENSE
