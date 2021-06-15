@@ -1,36 +1,33 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
+const useStyles = makeStyles(() => ({
+  root: {
+    marginBottom: 8,
+  },
+}));
 
 export const AddTransaction = () => {
+  const classes =useStyles();
+
     return (
       <form
-        style={{
-          // display: "flex",
-          // alignItems: "center",
-          // flexDirection: "column",
-          width:260
-        }}
+        className='width'
       >
         <div
-          style={{
-            display: 'flex',
-            flexDirection: "column",
-            fontWeight: 'bold',
-          }}
+          className='boldu'
         >
           Add New Transaction
         </div>
         <hr />
         <div>
-          <Typography style={{ fontSize: 15 }}>Text</Typography>
+          <div className='labelSize'>Text</div>
           <TextField
             id="outlined-full-width"
-            style={{ marginBottom: 8 }}
+            className={classes.root}
             placeholder="Enter text..."
             fullWidth
             // margin="normal"
@@ -41,14 +38,14 @@ export const AddTransaction = () => {
           />
         </div>
         <div>
-          <Typography style={{ fontSize: 15 }}>
+          <div className='labelSize'>
             Amount
             <br />
             (negative-expense, positive-income)
-          </Typography>
+          </div>
           <TextField
             id="outlined-full-width"
-            style={{ marginBottom: 8 }}
+            className={classes.root}
             placeholder="Enter amount..."
             fullWidth
             // margin="normal"
@@ -58,7 +55,7 @@ export const AddTransaction = () => {
             variant="outlined"
           />
         </div>
-        <Box style={{ display: 'grid', justifySelf: 'center' }}>
+        <Box className='addTrans'>
           <Button variant="contained" color="primary">
             Add Transaction
           </Button>

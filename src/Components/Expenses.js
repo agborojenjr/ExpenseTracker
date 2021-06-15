@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      minWidth: 275,
+      // minWidth: 275,
     },
     divider: {
       margin: theme.spacing(1.5, 0.5),
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
 export const Expenses = () => {
     const classes = useStyles();
     return (
-          <Paper style={{ display: 'flex', justifyContent:'space-around', width:260 }}>
-            <Box style={{margin: 10, borderLeft:10 }}>
+          <Paper className='expense'>
+            <Box className='exp_margin'>
               <Typography>
                   INCOME
               </Typography>
@@ -36,7 +36,7 @@ export const Expenses = () => {
             </Box>
             <Divider flexItem orientation="vertical" className={classes.divider} />
             {/* <div style={{margin: 6, fontSize:35, color:'#DEDFDF' }}>|</div> */}
-            <Box style={{margin: 10 }}>
+            <Box className='exp_margin'>
               <Typography>
                   EXPENSE
               </Typography>

@@ -1,0 +1,59 @@
+.history_red {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    border-right: 5px solid red;
+}
+
+.history_green {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    border-right: 5px solid green;
+}
+
+.boldu {
+    font-weight: bold;
+}
+
+.expense {
+    display: flex;
+    justify-content:space-around;
+    width:260px;
+}
+
+.width {
+    width: 260px;
+}
+
+.header {
+    display:flex;
+    width:150px;
+    flex-wrap:wrap;
+    margin-left: -110px;
+}
+
+.exp_margin {
+    margin: 10px;
+}
+
+.leftMargin {
+    margin-left: 5px;
+}
+
+.rightMargin {
+    margin-right: 5px;
+}
+
+.labelSize {
+    font-size: 15px;
+}
+
+.textField {
+    margin-bottom: 8px;
+}
+
+.addTrans {
+    display: grid;
+    justify-self: center;
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import { Box, Paper } from '@material-ui/core';
-import { red } from '@material-ui/core/colors';
+import { Paper } from '@material-ui/core';
 
 const initialState = {
   transactions: [
@@ -18,11 +16,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
         margin: theme.spacing(1),
-        width: '25ch',
+        // width: '25ch',
       },
-    },
-    payment: {
-      // border: '3px solid red',
     },
   }));
 
@@ -34,24 +29,19 @@ export const Transactions = () => {
         <Paper
           elevation={2}
           border={1}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: 260,
-            borderRight: "5px solid red",
-          }}
+          className={transaction.amount>0 ? 'history_green' : 'history_red'}
           key={i}
         >
-          <div style={{ marginLeft: 5 }}>{transaction.text}</div>
-          <div style={{ marginRight: 5 }}>{transaction.amount}</div>
+          <div className='leftMargin'>{transaction.text}</div>
+          <div className='rightMargin'>{transaction.amount}</div>
         </Paper>
       );
     });
 
     return (
       <form className={classes.root} noValidate autoComplete="off">
-        <Typography style={{ fontWeight: "bold" }}>History</Typography>
-        <hr style={{ width: 260 }} />
+        <h4>History</h4>
+        <hr className='width' />
         {payment}
       </form>
     );
