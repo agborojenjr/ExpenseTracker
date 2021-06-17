@@ -6,16 +6,20 @@ import { Header } from './Components/Header';
 import { Transactions } from './Components/Transactions';
 import './Components/Tracker.css';
 
+import { GlobalProvider } from './Context/GlobalState';
+
 
 function App() {
   return (
-    <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#EDEEEE' }}>
-      <Header />
-      <Balance />
-      <Expenses />
-      <Transactions />
-      <AddTransaction />
-    </div>
+    <GlobalProvider>
+      <div style={{ display:'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#EDEEEE' }}>
+        <Header />
+        <Balance />
+        <Expenses />
+        <Transactions />
+        <AddTransaction />
+      </div>
+    </GlobalProvider>
   );
 }
 

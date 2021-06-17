@@ -57,3 +57,12 @@
     display: grid;
     justify-self: center;
 }
+
+.deleteTrans {
+    background-color: rgb(20, 49, 216);
+}
+
+.deleteTrans:hover {
+    background-color: red;
+    transform: scale(1.2);
+}

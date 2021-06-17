@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
+import { GlobalContext } from '../Context/GlobalState';
 
-const initialState = {
-  transactions: [
-    {id: 1, text:'Flower', amount:-20},
-    {id: 2, text:'Salary', amount:300},
-    {id: 3, text:'Book', amount:-10},
-    {id: 4, text:'Camera', amount:150},
-    {id: 5, text:'Ojen', amount:600},
-  ]
-}
+// const initialState = {
+//   transactions: [
+//     {id: 1, text:'Flower', amount:-20},
+//     {id: 2, text:'Salary', amount:300},
+//     {id: 3, text:'Book', amount:-10},
+//     {id: 4, text:'Camera', amount:150},
+//   ]
+// }
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,17 +24,22 @@ const useStyles = makeStyles((theme) => ({
 export const Transactions = () => {
     const classes = useStyles();
 
-    const payment = initialState.transactions.map((transaction, i) => {
+    const { transactions } = useContext(GlobalContext);
+
+    const payment = transactions.map((transaction, i) => {
       return (
-        <Paper
+        <div>
+          <button className='deleteTrans'>x</button>
+          <Paper
           elevation={2}
           border={1}
           className={transaction.amount>0 ? 'history_green' : 'history_red'}
           key={i}
-        >
+         >
           <div className='leftMargin'>{transaction.text}</div>
           <div className='rightMargin'>{transaction.amount}</div>
         </Paper>
+        </div>
       );
     });
 
