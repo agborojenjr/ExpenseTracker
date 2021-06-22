@@ -26,10 +26,12 @@ export const Transactions = () => {
 
     const { transactions } = useContext(GlobalContext);
 
+    const { deleteTransaction } = useContext(GlobalContext);
+
     const payment = transactions.map((transaction, i) => {
       return (
         <div>
-          <button className='deleteTrans'>x</button>
+          <button className='deleteTrans' onClick={() => deleteTransaction(transaction.id)}>x</button>
           <Paper
           elevation={2}
           border={1}

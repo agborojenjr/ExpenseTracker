@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -11,6 +11,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 export const AddTransaction = () => {
+  const [text, setText] = useState('');
+  const [amount, setAmount] = useState(0);
+
+
   const classes =useStyles();
 
     return (
@@ -34,6 +38,8 @@ export const AddTransaction = () => {
             InputLabelProps={{
               shrink: true,
             }}
+            value={text}
+            onChange={(event) => setText(event.target.value)}
             variant="outlined"
           />
         </div>
@@ -52,6 +58,8 @@ export const AddTransaction = () => {
             InputLabelProps={{
               shrink: true,
             }}
+            value={amount}
+            onChange={(event) => setAmount(event.target.value)}
             variant="outlined"
           />
         </div>
